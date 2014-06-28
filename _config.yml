@@ -1,0 +1,25 @@
+structure:
+  Om siden:
+  - Hvad er det her for en side?
+  - Hvad hvis jeg vil spørge om noget?
+  Ansøgningen:
+  - Hvad er kravene til optagelse?
+  - Hvordan foregår ansøgningsprocessen?
+  - Hvornår gør jeg hvad?
+  - Hvordan skriver jeg mit personal statement (PS)?
+  - Hvem skal skrive min reference?
+  - Skal jeg tage en sprogtest?
+  Det sociale:
+  - Hvordan skal jeg vælge et college? Skal jeg sende en "open application"?
+  Økonomi (SU, legater):
+  - Hvad er studieafgiften?
+  - Kan man få SU? Hvordan?
+  - Kan jeg regne med at få legater?
+  - Hvor dyrt er Oxford?
+  PPE:
+  - Skal jeg lægge lige meget vægt på alle tre fag i mit PS?
+  - Hvordan forbereder jeg mig til TSA'en?
+  - Hvordan forbereder jeg mig til PPE-interviewet?
+
+exclude:
+- README.md

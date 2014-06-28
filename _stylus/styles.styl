@@ -1,0 +1,179 @@
+@import normalize
+@import nib
+
+$small_header_color = #417090
+$big_header_color = #7c334f
+
+$side_width = 800
+
+body
+    background-color #FFF
+    font-family 'Helvetica Neue', Helvetica, Arial, sans-serif
+
+#wrapper
+    width $side_width px
+    margin 0 auto
+
+    >header
+        position fixed
+        width (($side_width/3*1) - 30) px
+        padding-right 30px
+
+        >a
+            text-decoration none
+
+            h1
+                text-align center
+                color $big_header_color
+                text-shadow 0 1px 0 darken(@color, 30%),
+                            0 2px 0 darken(@color, 30%),
+                            0 3px 0 darken(@color, 30%)
+                font-size 4em
+                font-family 'IM Fell English SC'
+                margin-bottom 5px
+                >span#small
+                    font-size 0.6em
+                    font-style italic
+                    font-family 'IM Fell English'
+                    color $small_header_color
+                    text-shadow 0 1px 0 darken(@color, 30%),
+                                0 2px 0 darken(@color, 30%)
+                    display block
+                    position relative
+                    top 0.7em
+                    left 0.55em
+
+        >nav
+            ul
+                list-style none
+            a
+                text-decoration none
+                color $small_header_color
+                font-family 'IM Fell English'
+                font-weight bold
+                transition color 0.5s, background-color 0.5s
+                &:hover
+                    color white
+            >ul
+                font-size 1.1em
+                padding 0
+                position relative
+                >li
+                    width 100%
+                    padding-bottom 10px
+                    >a
+                        padding 0.6em 1.5em
+                        position relative
+                        display block
+                        background-color #F3F3F3
+                        opacity 0.95
+                    ul
+                        font-size 0.9em
+                        position absolute
+                        display none
+                        left -9999px
+                        top -10px
+                        z-index 999
+                        box-shadow 0 0 2px #CCC
+                        background-color white
+                        padding 2em
+                        min-height 220px
+                        width 400px
+                        border-left 8px solid $big_header_color
+                        opacity 0
+                        >li
+                            border-bottom
+                            >a
+                                display block
+                                padding 0.9em 1.5em
+                        >li a:hover, >li a.focus
+                            background-color $big_header_color
+                            color white
+                    &:hover, &.active
+                        >ul
+                            display block
+                            opacity 0.95
+                            left 100%
+
+                    &:hover >a, &.active >a, & >a.focus
+                            z-index 1000
+                            background-color $big_header_color
+                            color white
+
+
+#content
+    color #333
+    padding-left 30px
+    margin-left 30%
+    font-size 16px
+
+    >section
+        >header
+            >h1
+                background-color #F3F3F3
+                border-bottom 2px solid darken(@background-color, 10%)
+                padding 0.1em 0.5em
+                color $big_header_color
+        >article
+            margin-top -10px
+            padding-top 10px
+            padding-left 1em
+            padding-bottom 15px
+            line-height 1.7em
+            >header
+                h2
+                    color $small_header_color
+                    text-shadow 0 1px 0 darken($small_header_color, 30%)
+
+    h1, h2, h3, h4, h5, h6
+        font-family 'IM Fell English'
+
+
+    a
+        color $small_header_color
+        border-bottom 1px solid white
+        text-decoration none
+        transition color 0.5s, border-bottom 0.5s
+        &:hover
+            color darken($small_header_color, 40%)
+            border-bottom 1px solid @color
+        &:active
+            position relative
+            top 1px
+
+@media screen and (max-width: 800px)
+    #wrapper
+        width 100%
+        >header
+            position static
+            width 90%
+            padding 20px 5%
+            > nav > ul > li
+                >ul
+                    box-sizing border-box
+                    width 100%!important
+                    min-width 0
+                    padding 0!important
+                    top 100%!important
+                    top auto!important
+                    left 0!important
+
+
+        #content
+            width 95%
+            margin 0 auto
+            padding 2.5%
+
+
+@media screen and (min-width: 960px)
+    #wrapper
+        margin 0px (((960 - $side_width)/2)px)
+        width auto
+    #content
+        margin-left (0.3 * 800)px
+
+@media screen and (min-width: 1145px)
+    #wrapper
+        margin 0px auto
+        width (1145 - 2*(((960 - $side_width)/2)))px
+
